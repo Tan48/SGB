@@ -147,3 +147,35 @@ Makefile has commands in it that specify the installation directories and you
 can edit those names to put the files where you wish but it should work OK as is.
 In this installation the source files are located in /Users/<user-name>/Desktop/Knuth
 in the subdirectories CWEB and “Stanford GraphBase”.
+	
+================================== CWEBMAC File =============================
+
+The CWEBMAC.tex file is missing from the installation process in the above instructions
+for installing CWEB via the GitHub ruby command above.  It is available from the following
+webpage along with another file dlx1.tex - part of Knuth’s “Dancing Links” algorithm.
+
+See thread at: https://latex.org/forum/viewtopic.php?t=28647
+Which has the following issue on that webpage under https://latex.org
+
+by user: sminacapelli, Tue Nov 08, 2016 6:19 pm
+
+Hello.  Sorry in advance for my scarce knowledge of LyX.
+
+I'm trying without success to convert the attached TeX file "dlx1.tex" into a PDF document, 
+with my LyX version 1.6.10 in a Linux environment.  I know that also the attached 
+TeX file "cwebmac.tex" must be processed, that defines some used macros.  I tried to put both 
+files in the same directory, then to import the dlx1.tex, and finally to convert it into PDF. 
+But I got a long list of errors during such conversion.
+
+NOTE: Both TeX files are public domain in the context of CWEB literate programming 
+of Prof. Donald Knuth. The first is just extracted via CWEB's tool "cweave" from the Knuth's 
+file "dlx1.w". So I don't expect any error in it !
+
+Please, can someone help me ? Thank you.
+
+NOTE: The CWEBMAC.tex file will be placed in the Public GIT Repository Tan48
+Username: Tim Nicholson - Email: tim.a.nicholson@gmail.com
+
+
+	
+
