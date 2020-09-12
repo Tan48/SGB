@@ -1,0 +1,1827 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf610
+{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;\f1\fswiss\fcharset0 Helvetica;\f2\froman\fcharset0 Times-Roman;
+\f3\fmodern\fcharset0 Courier;\f4\fnil\fcharset0 Verdana;\f5\fnil\fcharset0 Menlo-Bold;
+}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red255\green255\blue255;\red0\green0\blue255;
+\red0\green0\blue0;\red251\green2\blue7;\red38\green38\blue38;\red184\green14\blue61;\red247\green238\blue241;
+\red67\green29\blue1;\red0\green0\blue233;\red0\green0\blue109;\red0\green0\blue255;\red251\green2\blue7;
+\red200\green20\blue201;\red47\green180\blue29;\red0\green0\blue0;\red255\green255\blue255;\red28\green0\blue207;
+\red196\green26\blue22;}
+{\*\expandedcolortbl;;\csgray\c0;\csgray\c100000;\cssrgb\c1680\c19835\c100000;
+\cssrgb\c0\c0\c0;\cssrgb\c100000\c14913\c0;\cssrgb\c20000\c20000\c20000;\cssrgb\c78039\c14510\c30588;\cssrgb\c97647\c94902\c95686;
+\cssrgb\c33333\c15686\c0;\cssrgb\c0\c0\c93333;\cssrgb\c0\c0\c50196;\cssrgb\c1680\c19835\c100000;\cssrgb\c100000\c14913\c0;
+\cssrgb\c83396\c23075\c82664;\cssrgb\c20238\c73898\c14947;\csgenericrgb\c0\c0\c0;\csgenericrgb\c100000\c100000\c100000;\csgenericrgb\c11000\c0\c81000;
+\csgenericrgb\c77000\c10200\c8600;}
+\margl1440\margr1440\vieww27820\viewh14400\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs28 \cf2 \cb3 \CocoaLigature0 \
+\
+======== Instructions and Install Log for Knuth\'92s Stanford GraphBase ======== \
+               For: Mac OS Version 10.13 or later\
+\
+By:		Tim Nicholson (tim.a.nicholson@gmail.com) - Stanford Class of 1971\
+File:	Install GraphBase Mac OS.rtf\
+Version: September 11, 2020\
+\
+The Stanford GraphBase is a set of programs written in the C Language and has\
+documentation on programs that manipulate data structures called graphs.  Donald\
+Knuth\'92s 1993 book \'93The Stanford GraphBase - A Platform for Combinatorial Computing\'94\
+describes these programs in detail as a means to allow others to rewrite the\
+software and try other methods or to combine graphs with other data structures.\
+See: 	{\field{\*\fldinst{HYPERLINK "https://www-cs-faculty.stanford.edu/~knuth/sgb.html"}}{\fldrslt \cf4 The Stanford GraphBase - A Platform for Combinatorial Computing}}\
+		By Donald E. Knuth, Copyright 1994 by the ACM Press
+\fs22 \
+
+\fs28 \
+Knuth\'92s series of books \'93The Art of Computer Programming\'94 has an extensive amount\
+of algorithms on combinatorial computing in Volume 4.  Volume 4A was published\
+in 2011 and two more volumes should follow soon if all goes well.  The Stanford\
+GraphBase is a good companion for those students wishing to test various routines\
+that appear in Volume 4A and the ones to follow.  Knuth\'92s CWEB software is\
+also useful and its installation is required to implement these programs.\
+\
+For more information on CWEB See (i.e. click on):
+\fs22 \
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth13481\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://www-cs-faculty.stanford.edu/~knuth/cweb.html"}}{\fldrslt 
+\fs28 \cf4 \expnd0\expndtw0\kerning0
+\CocoaLigature1 The CWEB System of Structured Documentation}}
+\fs28 \cf5 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \
+by Donald E. Knuth and Silvio Levy (Reading, Massachusetts: Addison-Wesley)\
+\
+And a way to write well documented programs:\
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://www-cs-faculty.stanford.edu/~knuth/lp.html"}}{\fldrslt \cf4 Literate Programming}}\
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf5 \cb1 by Donald E. Knuth (Stanford, California: Center for the Study of Language and Information, 1992)\cb3 \
+\
+\cf2 \kerning1\expnd0\expndtw0 \CocoaLigature0 Notes:\cell \lastrow\row
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\
+1)	This file: \'93Install GraphBase Mac OS.rtf\'94 is created and maintained using the\
+	Mac OS \'93TextEdit\'94 program in the Applications directory.\
+	See: /Applications/Launchpad.app.\
+\
+	Any other plain text editor will also work.  It is also distributed as a PDF file.\
+	The text in \cf4 blue\cf2  are links to web sites which you can \ul click on below\ulnone  to see \
+	what the link refers to.  The text in \cf6 red\cf2  are commands entered on the Mac\
+	Terminal app which can be invoked by following steps 2a and 2b below.\
+	Search for \'93Mac Terminal Commands\'94 for a list of them.  Each terminal command\
+	has on-line documentation that can be viewed by entering \'93\cf6 man <command-name>\cf2 \'94.\
+	You can recall a previously entered command by using the \cf6 Up-Arrow\cf2  key and\
+	the other \cf6 Arrow\cf2  keys and the \cf6 Delete\cf2  key to modify and resubmit the command.\
+\
+2)	Before you install the Stanford GraphBase library you must have Knuth\'92s\
+	CWEB programs installed.  See: {\field{\*\fldinst{HYPERLINK "http://macappstore.org/cweb/"}}{\fldrslt \cf4 http://macappstore.org/cweb/}}\cf4 \
+\cf2 \
+	a)	Run the Terminal app (Its icon is at the bottom) or:\
+\
+
+\fs22 	
+\fs28 b)
+\fs22  	
+\f1\fs28 \cf7 \cb1 \expnd0\expndtw0\kerning0
+\CocoaLigature1 Press 
+\f0\fs25\fsmilli12600 \cf8 \cb9 Command+Space
+\f1\fs28 \cf7 \cb1  and type Terminal and press enter/return key\
+	     	
+\f0 \cf2 \cb3 \kerning1\expnd0\expndtw0 \CocoaLigature0 to enter commands to Mac OS.  Then enter the command (all on the\
+		same line - Note: \cf6 ruby\cf2  is an Interpreted object-oriented scripting language.\
+		Type \'93\cf6 man ruby\cf2 \'94 for usage.  Homebrew is a software installation program.):\
+
+\fs22 \
+	
+\fs28 c)
+\fs22  	
+\fs25\fsmilli12600 \cf8 \cb9 \expnd0\expndtw0\kerning0
+\CocoaLigature1 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" \
+			< /dev/null 2> /dev/null\
+\
+
+\fs22 \cf2 \cb3 \kerning1\expnd0\expndtw0 \CocoaLigature0 	
+\fs28 d) 	Once Homebrew is installed then enter the command:\
+
+\fs22 \
+	
+\fs28 e)
+\fs22  	
+\fs25\fsmilli12600 \cf8 \cb9 \expnd0\expndtw0\kerning0
+\CocoaLigature1 brew install cweb\
+
+\fs22 \cf2 \cb3 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
+	
+\fs28 f) 	See Step 4) below to optionally install Knuth\'92s TEX typesetting S/W\
+		TEX or its variants.  They can be used in CWEB and SGB to typeset the\
+		output of the CWEAVE program in CWEB.
+\fs22 \
+\
+
+\fs28 3)	Download the TAR file that contains the source code and Makefile for the\
+	Stanford GraphBase library:\
+\
+	a) 	On Knuth\'92s GraphBase website at:\cf4 \
+		{\field{\*\fldinst{HYPERLINK "https://www-cs-faculty.stanford.edu/~knuth/sgb.html"}}{\fldrslt https://www-cs-faculty.stanford.edu/~knuth/sgb.html}}\
+\cf2 \
+	b) 	Find the following text (i.e. 
+\f2\fs32 \cf10 \cb1 \expnd0\expndtw0\kerning0
+\CocoaLigature1 Available from
+\f0\fs28 \cf2 \cb3 \kerning1\expnd0\expndtw0 \CocoaLigature0  . . .) on that webpage and\
+		click on \'93\cf4 \ul \ulc4 master sources\cf2 \ulnone \'94 and a file sgb.tar will be downloaded into your\
+		Downloads directory.  Move the TAR file to your source directory and then\
+		double-click to unpack the archive files into that source directory:\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\fs22 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs32 \cf10 \cb1 \expnd0\expndtw0\kerning0
+\CocoaLigature1 		Available from the publishers, {\field{\*\fldinst{HYPERLINK "http://www.acm.org/pubs/pressbooks/homepage.html/"}}{\fldrslt \cf11 \ul \ulc11 ACM Press}} or {\field{\*\fldinst{HYPERLINK "http://www.informit.com/title/0321606329"}}{\fldrslt \cf11 \ul \ulc11 Addison-Wesley Publishing Company}}.\
+	\
+		Public-domain sources for all programs and data of The Stanford GraphBase are freely\
+		available.  They can be obtained, for example,  by anonymous ftp from the {\field{\*\fldinst{HYPERLINK "ftp://ftp.cs.stanford.edu/pub/sgb/sgb.tar.gz"}}{\fldrslt \cf11 \ul \ulc11 master sources}}\
+		on 
+\f3\fs26 ftp.cs.stanford.edu
+\f2\fs32  in directory 
+\f3\fs26 ~ftp/pub/sgb
+\f2\fs32 . The programs are highly portable \
+		and have been installed on a wide variety of computers and operating systems.\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs28 \cf2 \cb3 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
+		There is a Unix style \'93Makefile\'94 to customize the locations of the\
+		output files which are generated by the C Compiler. C is available\
+		as part of Apple\'92s Xcode integrated development environment.\
+\
+4)	a) 	Install the TEX files from the following website: \
+		{\field{\*\fldinst{HYPERLINK "http://tug.org/mactex"}}{\fldrslt \cf4 http://tug.org/mactex}}:
+\fs22 \
+		
+\f2\fs32 \cf0 \cb1 \expnd0\expndtw0\kerning0
+\CocoaLigature1 To download, click {\field{\*\fldinst{HYPERLINK "http://tug.org/mactex/mactex-download.html"}}{\fldrslt 
+\b \cf12 \ul \ulc12 MacTeX Download}}. \
+		This distribution requires Mac OS 10.13, High Sierra, or higher and runs on Intel processors.
+\f0\fs28 \cf2 \cb3 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
+		(Note: the mactex-20200407.pkg file is 4.21 GB)\
+\
+		- OR for regular TEX and a much smaller install -
+\fs22 \
+\
+
+\fs28 	b)
+\fs22 	
+\f2\fs32 \cf0 \cb1 \expnd0\expndtw0\kerning0
+\CocoaLigature1 To download the smaller BasicTeX, click {\field{\*\fldinst{HYPERLINK "http://tug.org/mactex/morepackages.html"}}{\fldrslt 
+\b \cf12 \ul \ulc12 Smaller Download}}. \
+		
+\f0\fs28 \cf2 \cb3 \kerning1\expnd0\expndtw0 \CocoaLigature0 (Note: the mactex-basictex-20200407.pkg file is 83.2 MB)\
+		Either one or both versions can be downloaded and reside in different\
+		directories.\
+\
+In the install log and command line text below, <user-name> refers to your\
+Apple user name that appears under the /Users directory.  In order to browse\
+the Apple Directory structure you will need to invoke the \'93Terminal\'94 app in\
+your Application directory by clicking on the Launchpad ICON at the bottom.\
+You can also get to any directory from the Finder app by issuing the\
+keyboard command sequence <shift> <command> <G key> and entering the full path\
+name of the directory you wish to view in the the pop-up menu that is displayed.\
+To see the top level directory, i.e. the root, just enter \'93/\'93 as the path and\
+then to see the contents of that enter the command \'93ls\'94 to list the subfiles. \
+\
+You can also display the environment variables that Mac OS uses such as $PATH,\
+which is list of directories that is searched to find programs or apps scattered\
+across several locations.  Launch the Terminal app and enter: SUDO ENV to invoke\
+a restricted command as a \'93Super User\'94 and hit return followed by your password\
+as follows to display these variables:\
+\
+		My-Mac-Air:Knuth <user-name>$ \cf6 sudo env\cf2 \
+		Password: 
+\fs26 <enter your \cf6 login password\cf2 >
+\fs28 \
+		TERM=xterm-256color\
+		SSH_AUTH_SOCK=/private/tmp/com.apple.launchd.MKxIwsbBYG/Listeners\
+		PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:\cf4 /Library/TeX/texbin\cf2 \
+		LANG=en_US.UTF-8\
+		HOME=/Users/<user-name>\
+		( . . . and other ENV variables)\
+\
+Note that the $PATH variable has \cf4 /Library/TeX/texbin\cf2  as one of the directories\
+(where the TEX app is located).  You may also enter the command \'93\cf6 cd $HOME/Desktop\cf2 \'94\
+or \'93\cf6 cd ~/Desktop\cf2 \'94 to get to your desktop directory.  The install script \cf6 Makefile\cf2 \
+has terminal commands that compile and install files in difference directories.\
+It has the following phases by entering \'93make <phase>\'94 in the terminal app:\
+\
+My-Mac-Air:/ <user-name>$ \cf6 make tests		          \cf5 (checks for existence of install files)\cf2 \
+My-Mac-Air:/ <user-name>$ \cf6 sudo make install       \cf5 (compiles C source files, and others)\cf2 \
+My-Mac-Air:/ <user-name>$ \cf6 sudo make installdemos  \cf5 (compiles demo programs and installs them)\cf6 \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf5 In order to install the apps (binary files) in system directories you must run\
+the command as a Super User (SUDO) and enter the logon password to continue.  The\
+Makefile has commands in it that specify the installation directories and you\
+can edit those names to put the files where you wish but it should work OK as is.\
+In this installation the source files are located in /Users/<user-name>/Desktop/Knuth\
+in the subdirectories CWEB and \'93Stanford GraphBase\'94.\
+\
+================================== CWEBMAC File =============================\
+\
+The \cf13 CWEBMAC.tex\cf5  file is missing from the installation process in the above instructions\
+for installing CWEB via the GitHub \cf14 ruby\cf5  command above.  It is available from the following\
+webpage along with another file \cf13 dlx1.tex\cf5  - part of Knuth\'92s \'93Dancing Links\'94 algorithm.\
+\
+See thread at: {\field{\*\fldinst{HYPERLINK "https://latex.org/forum/viewtopic.php?t=28647"}}{\fldrslt https://latex.org/forum/viewtopic.php?t=28647}}\
+Which has the following issue on that webpage under https://latex.org\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f4 \cf5 \cb3 \expnd0\expndtw0\kerning0
+\CocoaLigature1 by user: \cf13 sminacapelli\cf5 , Tue Nov 08, 2016 6:19 pm
+\fs20 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs28 \cf7 Hello.  Sorry in advance for my scarce knowledge of LyX.\
+\
+I'm trying without success to convert the attached TeX file "dlx1.tex" into a PDF document, \
+with my LyX version 1.6.10 in a Linux environment.  I know that also the attached \
+TeX file "cwebmac.tex" must be processed, that defines some used macros.  I tried to put both \
+files in the same directory, then to import the dlx1.tex, and finally to convert it into PDF. \
+But I got a long list of errors during such conversion.\
+\
+NOTE: Both TeX files are public domain in the context of CWEB literate programming \
+of Prof. Donald Knuth. The first is just extracted via CWEB's tool "cweave" from the Knuth's \
+file "dlx1.w". So I don't expect any error in it !\
+\
+Please, can someone help me ? Thank you.\
+\
+NOTE: The CWEBMAC.tex file will be placed in the Public GIT Repository \cf13 Tan48\cf7 \
+Username: Tim Nicholson - Email: tim.a.nicholson@gmail.com\
+\pard\pardeftab720\partightenfactor0
+\cf5 \cb3 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf5 =============================================================================
+\fs22 \cf2 \
+\pard\pardeftab720\partightenfactor0
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+My-Mac-Air:Desktop <user-name>$ \cf6 cd /\cf2 \
+My-Mac-Air:/ <user-name>$ \cf6 ls\cf2  \
+\
+Applications			etc\
+Library				home\
+Network				installer.failurerequests\
+System				net\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf4 Users\cf2 				private\
+Volumes				sbin\
+bin					tmp\
+cores				usr\
+dev					var\
+\pard\pardeftab720\partightenfactor0
+==================================================================================================\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+Note: If your user-name is Knuth you enter \'93\cf6 ls /Users/Knuth\cf2 \'94.  The files in the Desktop\
+directory appear as Icons on your display.\
+\
+My-Mac-Air:<user-name> <user-name>$ \cf6 ls /Users/<user-name>\cf2 \
+\
+Creative Cloud Files	Library		Public\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf4 Desktop\cf2 			Movies			hello\
+Documents		Music			pslog.txt\
+Downloads		Pictures			rename\
+\
+\pard\pardeftab720\partightenfactor0
+==================================================================================================\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\
+Note: Knuth and C Programs are directories.  The Knuth directory has the installation files.\
+The other files are not part of the installation.  Xcode.app is where Apple\'92s IDE app resides.\
+\
+My-Mac-Air:Desktop <user-name>$ \cf6 ls /Users/<user-name>/Desktop\cf2 \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf4 C Programs\cf2 						\cf4 Knuth\cf2 \
+MS_Word_File.docx				My_Software\
+Xcode.app\
+\
+If you enter: \cf6 ls -l ~/Desktop\cf2  for example you will see an extended list of\
+attributes for each file:\
+\
+My-Mac-Air:Desktop <user-name>$ \cf6 ls -l ~/Desktop\cf2 \
+total 62120\
+drwxr-xr-x     5 <user-name>  staff       160 Aug 27 21:58 C Programs\
+drwxr-xr-x    21 <user-name>  staff       672 Sep  1 18:39 \cf13 Knuth\cf2 \
+-rw-r--r--@    1 <user-name>  staff   1228647 Sep  1 16:53 MS_Word_File.docx\
+drwxr-xr-x    15 <user-name>  staff       480 Sep  1 17:49 My_Software\
+drwxr-xr-x     3 <user-name>  staff        96 Oct 19  2018 Xcode.app\
+\
+==================================================================================================\
+\
+\
+My-Mac-Air:Knuth <user-name>$ \cf6 ls /Users/<user-name>/Desktop/Knuth\cf2 \
+\
+ERRATA in Stanford Graphbase 2020.rtf	\
+Knuth Vol 4a Errors.pdf\
+Knuth Vol 4B Facile 8a.ps		\
+\cf4 GraphBase\cf2 \
+Knuth Vol 4B Facile 9a.ps		\
+TEX Install ReadMe.pdf\
+Knuth Vol 4a All Errors.pdf		\
+\cf4 CWEB\
+SGB\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf5 This directory contains other documents downloaded from Knuth\'92s webpages including errors in his \
+publications and pre-published versions of Volumes 4B and later 4C.  They are not part of\
+the installation.  The \cf13 SGB\cf5  directory is where user modified GraphBase.w files are built below. \cf2 \
+\
+\pard\pardeftab720\partightenfactor0
+==================================================================================================\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\
+My-Mac-Air:Knuth <user-name>$ \cf6 cd "GraphBase"\cf2 \
+\
+My-Mac-Air:GraphBase <user-name>$ \cf6 ls\cf2 \
+\
++The+Stanford+GraphBase+	gb_basic.w			homer.dat\
+AMIGA					gb_books.w			huck.dat\
+ANSI						gb_dijk.w			jean.dat\
+ERRATA					gb_econ.w			ladders.w\
+MSVC						gb_flip.w			lisa.dat\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf4 Makefile\cf6 	\cf2 				gb_games.w			miles.dat\
+PROTOTYPES				gb_gates.w			miles_span.w\
+README					gb_graph.w			multiply.w\
+abstract.plaintex		gb_io.w				queen.w\
+anna.dat					gb_lisa.w			queen_wrap.ch\
+assign_lisa.w			gb_miles.w			roget.dat\
+blank.w					gb_plane.w			roget_components.w\
+boilerplate.w			gb_raman.w			sample.correct\
+book_components.w		gb_rand.w			take_risc.w\
+cities.texmap			gb_roget.w			test.correct\
+david.dat				gb_save.w			test.dat\
+econ.dat					gb_sort.w			test_sample.w\
+econ_order.w				gb_types.w			word_components.w\
+football.w				gb_words.w			word_giant.ch\
+games.dat				girth.w				words.dat\
+\
+Note: After running the Makefile in this directory additional files will be placed there.\
+See the section below for the updated list of files.\
+\
+\pard\pardeftab720\partightenfactor0
+============================================ Make Tests ==========================================\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\
+My-Mac-Air:GraphBase <user-name>$ \cf6 make tests\cf2 \
+\
+if test -r gb_io.ch; then ctangle gb_io.w gb_io.ch; else ctangle gb_io.w; fi\
+This is CTANGLE (Version 3.64)\
+*1*8*10*21*28*38*43\
+Writing the output files: (gb_io.c)..\
+(test_io.c)\
+(gb_io.h)\
+Done.\
+(No errors were found.)\
+cc -g -I/usr/local/sgb/include  -DDATA_DIRECTORY=\\"/usr/local/sgb/data/\\" -c gb_io.c\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f5\b gb_io.w:201:14: \cf15 warning: \cf2 result of comparison of constant 255 with expression of type 'char' is
+\f0\b0 \
+
+\f5\b       always false [-Wtautological-constant-out-of-range-compare]
+\f0\b0 \
+return(c<0||c> 255)?unexpected_char:icode[c];\
+
+\f5\b \cf16             ~^ ~~~
+\f0\b0 \cf2 \
+1 warning generated.\
+cc -g -I/usr/local/sgb/include  test_io.c gb_io.o -o test_io\
+make gb_graph.c\
+if test -r gb_graph.ch; then ctangle gb_graph.w gb_graph.ch; else ctangle gb_graph.w; fi\
+This is CTANGLE (Version 3.64)\
+*1*8*11*20*42*49\
+Writing the output files: (gb_graph.c)...\
+(test_graph.c)\
+(gb_graph.h).\
+Done.\
+(No errors were found.)\
+make gb_graph.o\
+cc -g -I/usr/local/sgb/include    -c -o gb_graph.o gb_graph.c\
+cc -g -I/usr/local/sgb/include  test_graph.c gb_graph.o -o test_graph\
+make gb_flip.c\
+if test -r gb_flip.ch; then ctangle gb_flip.w gb_flip.ch; else ctangle gb_flip.w; fi\
+This is CTANGLE (Version 3.64)\
+*1*4*8*12*14\
+Writing the output files: (gb_flip.c)\
+(test_flip.c)\
+(gb_flip.h)\
+Done.\
+(No errors were found.)\
+make gb_flip.o\
+cc -g -I/usr/local/sgb/include    -c -o gb_flip.o gb_flip.c\
+cc -g -I/usr/local/sgb/include  test_flip.c gb_flip.o -o test_flip\
+./test_io\
+OK, the gb_io routines seem to work!\
+./test_graph\
+\
+..........................................................................................\
+.................................Hey, I allocated 10000000 bytes successfully. Terrific...\
+\
+OK, the gb_graph routines seem to work!\
+./test_flip\
+OK, the gb_flip routines seem to work!\
+make gb_sort.o\
+make gb_sort.c\
+if test -r gb_sort.ch; then ctangle gb_sort.w gb_sort.ch; else ctangle gb_sort.w; fi\
+This is CTANGLE (Version 3.64)\
+*1*12\
+Writing the output files: (gb_sort.c)\
+(gb_sort.h)\
+Done.\
+(No errors were found.)\
+make gb_sort.o\
+cc -g -I/usr/local/sgb/include    -c -o gb_sort.o gb_sort.c\
+make lib\
+make gb_basic.c\
+if test -r gb_basic.ch; then ctangle gb_basic.w gb_basic.ch; else ctangle gb_basic.w; fi\
+This is CTANGLE (Version 3.64)\
+*1*6*24*36*41*54*63*73*77*87*94*100*115\
+Writing the output files: (gb_basic.c).....500.....1000.....1500.\
+(gb_basic.h)\
+Done.\
+(No errors were found.)\
+make gb_basic.o\
+cc -g -I/usr/local/sgb/include    -c -o gb_basic.o gb_basic.c\
+make gb_books.c\
+if test -r gb_books.ch; then ctangle gb_books.w gb_books.ch; else ctangle gb_books.w; fi\
+This is CTANGLE (Version 3.64)\
+*1*12*19*26*30\
+Writing the output files: (gb_books.c)..\
+(gb_books.h)\
+Done.\
+(No errors were found.)\
+make gb_books.o\
+cc -g -I/usr/local/sgb/include    -c -o gb_books.o gb_books.c\
+make gb_econ.c\
+if test -r gb_econ.ch; then ctangle gb_econ.w gb_econ.ch; else ctangle gb_econ.w; fi\
+This is CTANGLE (Version 3.64)\
+*1*11*17*25*31\
+Writing the output files: (gb_econ.c)...\
+(gb_econ.h)\
+Done.\
+(No errors were found.)\
+make gb_econ.o\
+cc -g -I/usr/local/sgb/include    -c -o gb_econ.o gb_econ.c\
+make gb_games.c\
+if test -r gb_games.ch; then ctangle gb_games.w gb_games.ch; else ctangle gb_games.w; fi\
+This is CTANGLE (Version 3.64)\
+*1*11*21*25\
+Writing the output files: (gb_games.c)..\
+(gb_games.h)\
+Done.\
+(No errors were found.)\
+make gb_games.o\
+cc -g -I/usr/local/sgb/include    -c -o gb_games.o gb_games.c\
+make gb_gates.c\
+if test -r gb_gates.ch; then ctangle gb_gates.w gb_gates.ch; else ctangle gb_gates.w; fi\
+This is CTANGLE (Version 3.64)\
+*1*8*38*43*49*66*75*84*86\
+Writing the output files: (gb_gates.c).....500.....1000..\
+(gb_gates.h)\
+Done.\
+(No errors were found.)\
+make gb_gates.o\
+cc -g -I/usr/local/sgb/include    -c -o gb_gates.o gb_gates.c\
+
+\f5\b gb_gates.w:1112:8: \cf15 warning: \cf2 format string is not a string literal (potentially insecure)
+\f0\b0 \
+
+\f5\b       [-Wformat-security]
+\f0\b0 \
+printf(a->tip->name);\
+
+\f5\b \cf16        ^~~~~~~~~~~~
+\f0\b0 \cf2 \
+
+\f5\b gb_gates.w:1112:8: note: 
+\f0\b0 treat the string as an argument to avoid this\
+printf(a->tip->name);\
+
+\f5\b \cf16        ^
+\f0\b0 \cf2 \
+\cf16        "%s", \cf2 \
+1 warning generated.\
+make gb_lisa.c\
+if test -r gb_lisa.ch; then ctangle gb_lisa.w gb_lisa.ch; else ctangle gb_lisa.w; fi\
+This is CTANGLE (Version 3.64)\
+*1*11*15*19*23*33*37\
+Writing the output files: (gb_lisa.c)...\
+(gb_lisa.h)\
+Done.\
+(No errors were found.)\
+make gb_lisa.o\
+cc -g -I/usr/local/sgb/include    -c -o gb_lisa.o gb_lisa.c\
+make gb_miles.c\
+if test -r gb_miles.ch; then ctangle gb_miles.w gb_miles.ch; else ctangle gb_miles.w; fi\
+This is CTANGLE (Version 3.64)\
+*1*9*17*22\
+Writing the output files: (gb_miles.c)..\
+(gb_miles.h)\
+Done.\
+(No errors were found.)\
+make gb_miles.o\
+cc -g -I/usr/local/sgb/include    -c -o gb_miles.o gb_miles.c\
+make gb_plane.c\
+if test -r gb_plane.ch; then ctangle gb_plane.w gb_plane.ch; else ctangle gb_plane.w; fi\
+This is CTANGLE (Version 3.64)\
+*1*8*13*20*25*34*41*45\
+Writing the output files: (gb_plane.c).....500\
+(gb_plane.h)\
+Done.\
+(No errors were found.)\
+make gb_plane.o\
+cc -g -I/usr/local/sgb/include    -c -o gb_plane.o gb_plane.c\
+make gb_raman.c\
+if test -r gb_raman.ch; then ctangle gb_raman.w gb_raman.ch; else ctangle gb_raman.w; fi\
+This is CTANGLE (Version 3.64)\
+*1*6*13*18*26*30*32\
+Writing the output files: (gb_raman.c)...\
+(gb_raman.h)\
+Done.\
+(No errors were found.)\
+make gb_raman.o\
+cc -g -I/usr/local/sgb/include    -c -o gb_raman.o gb_raman.c\
+make gb_rand.c\
+if test -r gb_rand.ch; then ctangle gb_rand.w gb_rand.ch; else ctangle gb_rand.w; fi\
+This is CTANGLE (Version 3.64)\
+*1*11*22*24*28\
+Writing the output files: (gb_rand.c)...\
+(gb_rand.h)\
+Done.\
+(No errors were found.)\
+make gb_rand.o\
+cc -g -I/usr/local/sgb/include    -c -o gb_rand.o gb_rand.c\
+
+\f5\b gb_rand.w:228:1: \cf15 warning: \cf2 add explicit braces to avoid dangling else [-Wdangling-else]
+\f0\b0 \
+else\{\
+
+\f5\b \cf16 ^
+\f0\b0 \cf2 \
+
+\f5\b gb_rand.w:223:1: \cf15 warning: \cf2 add explicit braces to avoid dangling else [-Wdangling-else]
+\f0\b0 \
+else\{register Arc*a;\
+
+\f5\b \cf16 ^
+\f0\b0 \cf2 \
+2 warnings generated.\
+make gb_roget.c\
+if test -r gb_roget.ch; then ctangle gb_roget.w gb_roget.ch; else ctangle gb_roget.w; fi\
+This is CTANGLE (Version 3.64)\
+*1*6*10*15\
+Writing the output files: (gb_roget.c).\
+(gb_roget.h)\
+Done.\
+(No errors were found.)\
+make gb_roget.o\
+cc -g -I/usr/local/sgb/include    -c -o gb_roget.o gb_roget.c\
+make gb_words.c\
+if test -r gb_words.ch; then ctangle gb_words.w gb_words.ch; else ctangle gb_words.w; fi\
+This is CTANGLE (Version 3.64)\
+*1*9*14*22*30*32\
+Writing the output files: (gb_words.c)...\
+(gb_words.h)\
+Done.\
+(No errors were found.)\
+make gb_words.o\
+cc -g -I/usr/local/sgb/include    -c -o gb_words.o gb_words.c\
+make gb_dijk.c\
+if test -r gb_dijk.ch; then ctangle gb_dijk.w gb_dijk.ch; else ctangle gb_dijk.w; fi\
+This is CTANGLE (Version 3.64)\
+*1*4*15*20*26\
+Writing the output files: (gb_dijk.c)..\
+(gb_dijk.h)\
+Done.\
+(No errors were found.)\
+make gb_dijk.o\
+cc -g -I/usr/local/sgb/include    -c -o gb_dijk.o gb_dijk.c\
+make gb_save.c\
+if test -r gb_save.ch; then ctangle gb_save.w gb_save.ch; else ctangle gb_save.w; fi\
+This is CTANGLE (Version 3.64)\
+*1*3*19*47\
+Writing the output files: (gb_save.c).....500.\
+(gb_save.h)\
+Done.\
+(No errors were found.)\
+make gb_save.o\
+cc -g -I/usr/local/sgb/include    -c -o gb_save.o gb_save.c\
+rm -f certified\
+ar rcv libgb.a gb_flip.o gb_graph.o gb_io.o gb_sort.o gb_basic.o gb_books.o gb_econ.o \
+gb_games.o gb_gates.o gb_lisa.o gb_miles.o gb_plane.o gb_raman.o gb_rand.o gb_roget.o \
+gb_words.o gb_dijk.o gb_save.o\
+a - gb_flip.o\
+a - gb_graph.o\
+a - gb_io.o\
+a - gb_sort.o\
+a - gb_basic.o\
+a - gb_books.o\
+a - gb_econ.o\
+a - gb_games.o\
+a - gb_gates.o\
+a - gb_lisa.o\
+a - gb_miles.o\
+a - gb_plane.o\
+a - gb_raman.o\
+a - gb_rand.o\
+a - gb_roget.o\
+a - gb_words.o\
+a - gb_dijk.o\
+a - gb_save.o\
+ranlib libgb.a\
+make test_sample\
+make test_sample.c\
+if test -r test_sample.ch; then ctangle test_sample.w test_sample.ch; else ctangle test_sample.w; fi\
+This is CTANGLE (Version 3.64)\
+*1*13*19\
+Writing the output file (test_sample.c):.\
+Done.\
+(No errors were found.)\
+make test_sample\
+cc -g -I/usr/local/sgb/include   -L. -L/usr/local/lib  test_sample.c -lgb -lgb -o test_sample\
+
+\f5\b test_sample.w:113:5: \cf15 warning: \cf2 using the result of an assignment as a condition without
+\f0\b0 \
+
+\f5\b       parentheses [-Wparentheses]
+\f0\b0 \
+if(i= random_lengths(g,0L,10L,12L,dst,2L))\
+
+\f5\b \cf16    ~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\f0\b0 \cf2 \
+
+\f5\b test_sample.w:113:5: note: 
+\f0\b0 place parentheses around the assignment to silence this warning\
+if(i= random_lengths(g,0L,10L,12L,dst,2L))\
+
+\f5\b \cf16     ^
+\f0\b0 \cf2 \
+\cf16    (                                     )\cf2 \
+
+\f5\b test_sample.w:113:5: note: 
+\f0\b0 use '==' to turn this assignment into an equality comparison\
+if(i= random_lengths(g,0L,10L,12L,dst,2L))\
+
+\f5\b \cf16     ^
+\f0\b0 \cf2 \
+\cf16     ==\cf2 \
+1 warning generated.\
+./test_sample > sample.out\
+diff test.gb test.correct\
+diff sample.out sample.correct\
+rm test.gb sample.out test_io test_graph test_flip test_sample\
+echo "Congratulations --- the tests have all been passed."\
+Congratulations --- the tests have all been passed.\
+touch certified\
+\
+\pard\pardeftab720\partightenfactor0
+================================================ Make Install ===================================\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\
+My-Mac-Air:GraphBase <user-name>$ \cf6 make install\cf2 \
+if test ! -r certified; then echo "Please run 'make tests' first!"; fi\
+test -r certified\
+make installdata\
+mkdir /usr/local/sgb\
+mkdir: /usr/local/sgb: File exists\
+make[1]: [installdata] Error 1 (ignored)\
+mkdir /usr/local/sgb/data\
+mkdir: /usr/local/sgb/data: Permission denied\
+make[1]: [installdata] Error 1 (ignored)\
+cp -p anna.dat david.dat econ.dat games.dat homer.dat huck.dat jean.dat lisa.dat miles.dat roget.dat words.dat /usr/local/sgb/data\
+usage: cp [-R [-H | -L | -P]] [-fi | -n] [-apvXc] source_file target_file\
+       cp [-R [-H | -L | -P]] [-fi | -n] [-apvXc] source_file ... target_directory\
+make[1]: [installdata] Error 64 (ignored)\
+mkdir /usr/local/lib\
+mkdir: /usr/local/lib: File exists\
+make: [install] Error 1 (ignored)\
+cp libgb.a /usr/local/lib\
+mkdir /usr/local/lib/cweb\
+mkdir: /usr/local/lib/cweb: File exists\
+make: [install] Error 1 (ignored)\
+cp -p boilerplate.w gb_types.w /usr/local/lib/cweb\
+mkdir /usr/local/sgb/include\
+mkdir: /usr/local/sgb/include: \cf6 Permission denied \cf5 (Must be Super User to execute command)\cf2 \
+make: [install] Error 1 (ignored)\
+cp -p gb_flip.h gb_graph.h gb_io.h gb_sort.h gb_basic.h gb_books.h gb_econ.h gb_games.h gb_gates.h gb_lisa.h gb_miles.h \cf14 (command wraps to next line)\cf2 \
+      gb_plane.h gb_raman.h gb_rand.h gb_roget.h gb_words.h gb_dijk.h gb_save.h Makefile /usr/local/sgb/include\
+usage: cp [-R [-H | -L | -P]] [-fi | -n] [-apvXc] source_file target_file\
+       cp [-R [-H | -L | -P]] [-fi | -n] [-apvXc] source_file ... target_directory\
+make: [install] Error 64 (ignored)\
+\
+\pard\pardeftab720\partightenfactor0
+====================== Make Install Failed - Rerun With Super User \'93SUDO\'94 Cmd ===================\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\
+My-Mac-Air:GraphBase <user-name>$ \cf6 sudo make install\cf2 \
+Password: <enter your \cf6 login password\cf2 >\
+\
+if test ! -r certified; then echo "Please run 'make tests' first!"; fi\
+test -r certified\
+make installdata\
+mkdir /usr/local/sgb\
+mkdir: /usr/local/sgb: File exists\
+make[1]: [installdata] Error 1 (ignored)\
+mkdir /usr/local/sgb/data\
+cp -p anna.dat david.dat econ.dat games.dat homer.dat huck.dat jean.dat lisa.dat miles.dat roget.dat words.dat /usr/local/sgb/data\
+mkdir /usr/local/lib\
+mkdir: /usr/local/lib: File exists\
+make: [install] Error 1 (ignored)\
+cp libgb.a /usr/local/lib\
+mkdir /usr/local/lib/cweb\
+mkdir: /usr/local/lib/cweb: File exists\
+make: [install] Error 1 (ignored)\
+cp -p boilerplate.w gb_types.w /usr/local/lib/cweb\
+mkdir /usr/local/sgb/include\
+cp -p gb_flip.h gb_graph.h gb_io.h gb_sort.h gb_basic.h gb_books.h gb_econ.h gb_games.h \
+gb_gates.h gb_lisa.h gb_miles.h gb_plane.h gb_raman.h gb_rand.h gb_roget.h gb_words.h \
+gb_dijk.h gb_save.h Makefile /usr/local/sgb/include\
+\
+\pard\pardeftab720\partightenfactor0
+==================================================================================================\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\
+Note: The source directory has been updated by the \'93\cf6 Make Install\cf2 \'94\
+commands that added the <program>.c and <program>.o and other files and\
+the symbolic links (i.e. program-name.dSYM) to other directories. \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf6 cd /Users/<user-name>/Desktop/Knuth/GraphBase\cf2 \
+\
+My-Mac-Air:GraphBase <user-name>$ \cf6 ls\cf2 \
+\
++The+Stanford+GraphBase+	gb_plane.h\
+AMIGA					gb_plane.o\
+ANSI						gb_plane.w\
+ERRATA					gb_raman.c\
+MSVC						gb_raman.h\
+Makefile					gb_raman.o\
+PROTOTYPES				gb_raman.w\
+README					gb_rand.c\
+abstract.plaintex		gb_rand.h\
+anna.dat					gb_rand.o\
+assign_lisa.c			gb_rand.w\
+assign_lisa.dSYM			gb_roget.c\
+assign_lisa.w			gb_roget.h\
+blank.w					gb_roget.o\
+boilerplate.w			gb_roget.w\
+book_components.c		gb_save.c\
+book_components.dSYM		gb_save.h\
+book_components.w		gb_save.o\
+certified				gb_save.w\
+cities.texmap			gb_sort.c\
+david.dat				gb_sort.h\
+econ.dat					gb_sort.o\
+econ_order.c				gb_sort.w\
+econ_order.dSYM			gb_types.w\
+econ_order.w				gb_words.c\
+football.c				gb_words.h\
+football.dSYM			gb_words.o\
+football.w				gb_words.w\
+games.dat				girth.c\
+gb_basic.c				girth.dSYM\
+gb_basic.h				girth.w\
+gb_basic.o				homer.dat\
+gb_basic.w				huck.dat\
+gb_books.c				jean.dat\
+gb_books.h				ladders.c\
+gb_books.o				ladders.dSYM\
+gb_books.w				ladders.w\
+gb_dijk.c				libgb.a\
+gb_dijk.h				lisa.dat\
+gb_dijk.o				miles.dat\
+gb_dijk.w				miles_span.c\
+gb_econ.c				miles_span.dSYM\
+gb_econ.h				miles_span.w\
+gb_econ.o				multiply.c\
+gb_econ.w				multiply.dSYM\
+gb_flip.c				multiply.w\
+gb_flip.h				queen.c\
+gb_flip.o				queen.dSYM\
+gb_flip.w				queen.w\
+gb_games.c				queen_wrap.ch\
+gb_games.h				roget.dat\
+gb_games.o				roget_components.c\
+gb_games.w				roget_components.dSYM\
+gb_gates.c				roget_components.w\
+gb_gates.h				sample.correct\
+gb_gates.o				take_risc.c\
+gb_gates.w				take_risc.dSYM\
+gb_graph.c				take_risc.w\
+gb_graph.h				test.correct\
+gb_graph.o				test.dat\
+gb_graph.w				test_flip.c\
+gb_io.c					test_flip.dSYM\
+gb_io.h					test_graph.c\
+gb_io.o					test_graph.dSYM\
+gb_io.w					test_io.c\
+gb_lisa.c				test_io.dSYM\
+gb_lisa.h				test_sample.c\
+gb_lisa.o				test_sample.dSYM\
+gb_lisa.w				test_sample.w\
+gb_miles.c				word_components.c\
+gb_miles.h				word_components.dSYM\
+gb_miles.o				word_components.w\
+gb_miles.w				word_giant.ch\
+gb_plane.c				words.dat\
+\
+\pard\pardeftab720\partightenfactor0
+======================================== Make Installdemos =======================================\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\
+My-Mac-Air:GraphBase <user-name>$ \cf6 pwd\cf2 \
+/users/<user-name>/Desktop/Knuth/GraphBase\
+\
+My-Mac-Air:GraphBase <user-name>$ \cf6 sudo make installdemos\cf2 \
+Password:\
+make assign_lisa.c\
+if test -r assign_lisa.ch; then ctangle assign_lisa.w assign_lisa.ch; else ctangle assign_lisa.w; fi\
+This is CTANGLE (Version 3.64)\
+*1*8*14*24*28*32\
+Writing the output file (assign_lisa.c):...\
+Done.\
+(No errors were found.)\
+make assign_lisa\
+cc -g -I/usr/local/sgb/include   -L. -L/usr/local/lib  assign_lisa.c -lgb -lgb -o assign_lisa\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f5\b assign_lisa.w:73:1: \cf15 warning: \cf2 type specifier missing, defaults to 'int' [-Wimplicit-int]
+\f0\b0 \
+main(argc,argv)\
+
+\f5\b \cf16 ^
+\f0\b0 \cf2 \
+1 warning generated.\
+make book_components.c\
+if test -r book_components.ch; then ctangle book_components.w book_components.ch; else ctangle book_components.w; fi\
+This is CTANGLE (Version 3.64)\
+*1*6*21*24\
+Writing the output file (book_components.c):.\
+Done.\
+(No errors were found.)\
+make book_components\
+cc -g -I/usr/local/sgb/include   -L. -L/usr/local/lib  book_components.c -lgb -lgb -o book_components\
+
+\f5\b book_components.w:58:1: \cf15 warning: \cf2 type specifier missing, defaults to 'int' [-Wimplicit-int]
+\f0\b0 \
+main(argc,argv)\
+
+\f5\b \cf16 ^
+\f0\b0 \cf2 \
+1 warning generated.\
+make econ_order.c\
+if test -r econ_order.ch; then ctangle econ_order.w econ_order.ch; else ctangle econ_order.w; fi\
+This is CTANGLE (Version 3.64)\
+*1*7*15\
+Writing the output file (econ_order.c):.\
+Done.\
+(No errors were found.)\
+make econ_order\
+cc -g -I/usr/local/sgb/include   -L. -L/usr/local/lib  econ_order.c -lgb -lgb -o econ_order\
+
+\f5\b econ_order.w:80:1: \cf15 warning: \cf2 type specifier missing, defaults to 'int' [-Wimplicit-int]
+\f0\b0 \
+main(argc,argv)\
+
+\f5\b \cf16 ^
+\f0\b0 \cf2 \
+1 warning generated.\
+make football.c\
+if test -r football.ch; then ctangle football.w football.ch; else ctangle football.w; fi\
+This is CTANGLE (Version 3.64)\
+*1*6*8*19*26*36\
+Writing the output file (football.c):...\
+Done.\
+(No errors were found.)\
+make football\
+cc -g -I/usr/local/sgb/include   -L. -L/usr/local/lib  football.c -lgb -lgb -o football\
+
+\f5\b football.w:61:1: \cf15 warning: \cf2 type specifier missing, defaults to 'int' [-Wimplicit-int]
+\f0\b0 \
+main(argc,argv)\
+
+\f5\b \cf16 ^
+\f0\b0 \cf2 \
+
+\f5\b football.w:296:1: \cf15 warning: \cf2 add explicit braces to avoid dangling else [-Wdangling-else]
+\f0\b0 \
+else best_arc= a,d= a->del;\
+
+\f5\b \cf16 ^
+\f0\b0 \cf2 \
+2 warnings generated.\
+make girth.c\
+if test -r girth.ch; then ctangle girth.w girth.ch; else ctangle girth.w; fi\
+This is CTANGLE (Version 3.64)\
+*1*6*12*14\
+Writing the output file (girth.c):.\
+Done.\
+(No errors were found.)\
+make girth\
+cc -g -I/usr/local/sgb/include   -L. -L/usr/local/lib  girth.c -lgb -lgb -o girth\
+
+\f5\b girth.w:65:1: \cf15 warning: \cf2 type specifier missing, defaults to 'int' [-Wimplicit-int]
+\f0\b0 \
+main()\
+
+\f5\b \cf16 ^
+\f0\b0 \cf2 \
+1 warning generated.\
+make ladders.c\
+if test -r ladders.ch; then ctangle ladders.w ladders.ch; else ctangle ladders.w; fi\
+This is CTANGLE (Version 3.64)\
+*1*4*6*12*26*28\
+Writing the output file (ladders.c):..\
+Done.\
+(No errors were found.)\
+make ladders\
+cc -g -I/usr/local/sgb/include   -L. -L/usr/local/lib  ladders.c -lgb -lgb -o ladders\
+
+\f5\b ladders.w:91:1: \cf15 warning: \cf2 type specifier missing, defaults to 'int' [-Wimplicit-int]
+\f0\b0 \
+main(argc,argv)\
+
+\f5\b \cf16 ^
+\f0\b0 \cf2 \
+
+\f5\b ladders.w:253:18: \cf15 warning: \cf2 format specifies type 'long' but the argument has type 'int'
+\f0\b0 \
+
+\f5\b       [-Wformat]
+\f0\b0 \
+quit_if(gg==NULL,no_room+5);\
+
+\f5\b \cf16 ~~~~~~~~~~~~~~~~~^~~~~~~~~~
+\f0\b0 \cf2 \
+
+\f5\b gb_graph.w:107:17: note: 
+\f0\b0 expanded from macro 'no_room'\
+#define no_room 1 \
+
+\f5\b \cf16                 ^
+\f0\b0 \cf2 \
+
+\f5\b ladders.w:91:62: note: 
+\f0\b0 expanded from macro 'quit_if'\
+"Sorry, I couldn't build a dictionary (trouble code %ld)!\\n",c) ; \\\
+
+\f5\b \cf16                                                     ~~~      ^
+\f0\b0 \cf2 \
+
+\f5\b ladders.w:259:25: \cf15 warning: \cf2 format specifies type 'long' but the argument has type 'int'
+\f0\b0 \
+
+\f5\b       [-Wformat]
+\f0\b0 \
+quit_if(gb_trouble_code,no_room+6);\
+
+\f5\b \cf16 ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+\f0\b0 \cf2 \
+
+\f5\b gb_graph.w:107:17: note: 
+\f0\b0 expanded from macro 'no_room'\
+#define no_room 1 \
+
+\f5\b \cf16                 ^
+\f0\b0 \cf2 \
+
+\f5\b ladders.w:91:62: note: 
+\f0\b0 expanded from macro 'quit_if'\
+"Sorry, I couldn't build a dictionary (trouble code %ld)!\\n",c) ; \\\
+
+\f5\b \cf16                                                     ~~~      ^
+\f0\b0 \cf2 \
+3 warnings generated.\
+make miles_span.c\
+if test -r miles_span.ch; then ctangle miles_span.w miles_span.ch; else ctangle miles_span.w; fi\
+This is CTANGLE (Version 3.64)\
+*1*8*12*19*23*29*43*55*64*71*72\
+Writing the output file (miles_span.c):.....500...\
+Done.\
+(No errors were found.)\
+make miles_span\
+cc -g -I/usr/local/sgb/include   -L. -L/usr/local/lib  miles_span.c -lgb -lgb -o miles_span\
+
+\f5\b miles_span.w:1155:1: \cf15 warning: \cf2 type specifier missing, defaults to 'int' [-Wimplicit-int]
+\f0\b0 \
+qunite(m,q,mm,qq,h)\
+
+\f5\b \cf16 ^
+\f0\b0 \cf2 \
+
+\f5\b miles_span.w:1176:1: \cf15 warning: \cf2 control reaches end of non-void function [-Wreturn-type]
+\f0\b0 \
+\}\
+
+\f5\b \cf16 ^
+\f0\b0 \cf2 \
+
+\f5\b miles_span.w:1257:1: \cf15 warning: \cf2 type specifier missing, defaults to 'int' [-Wimplicit-int]
+\f0\b0 \
+qenque(h,a)\
+
+\f5\b \cf16 ^
+\f0\b0 \cf2 \
+
+\f5\b miles_span.w:1265:1: \cf15 warning: \cf2 control reaches end of non-void function [-Wreturn-type]
+\f0\b0 \
+\}\
+
+\f5\b \cf16 ^
+\f0\b0 \cf2 \
+
+\f5\b miles_span.w:1272:1: \cf15 warning: \cf2 type specifier missing, defaults to 'int' [-Wimplicit-int]
+\f0\b0 \
+qmerge(h,hh)\
+
+\f5\b \cf16 ^
+\f0\b0 \cf2 \
+
+\f5\b miles_span.w:1284:1: \cf15 warning: \cf2 control reaches end of non-void function [-Wreturn-type]
+\f0\b0 \
+\}\
+
+\f5\b \cf16 ^
+\f0\b0 \cf2 \
+
+\f5\b miles_span.w:1339:1: \cf15 warning: \cf2 type specifier missing, defaults to 'int' [-Wimplicit-int]
+\f0\b0 \
+qtraverse(h,visit)\
+
+\f5\b \cf16 ^
+\f0\b0 \cf2 \
+
+\f5\b miles_span.w:1362:1: \cf15 warning: \cf2 control reaches end of non-void function [-Wreturn-type]
+\f0\b0 \
+\}\
+
+\f5\b \cf16 ^
+\f0\b0 \cf2 \
+
+\f5\b miles_span.w:197:1: \cf15 warning: \cf2 type specifier missing, defaults to 'int' [-Wimplicit-int]
+\f0\b0 \
+report(u,v,l)\
+
+\f5\b \cf16 ^
+\f0\b0 \cf2 \
+
+\f5\b miles_span.w:202:1: \cf15 warning: \cf2 control reaches end of non-void function [-Wreturn-type]
+\f0\b0 \
+\}\
+
+\f5\b \cf16 ^
+\f0\b0 \cf2 \
+
+\f5\b miles_span.w:99:1: \cf15 warning: \cf2 type specifier missing, defaults to 'int' [-Wimplicit-int]
+\f0\b0 \
+main(argc,argv)\
+
+\f5\b \cf16 ^
+\f0\b0 \cf2 \
+11 warnings generated.\
+make multiply.c\
+if test -r multiply.ch; then ctangle multiply.w multiply.ch; else ctangle multiply.w; fi\
+This is CTANGLE (Version 3.64)\
+*1*10*13*16\
+Writing the output file (multiply.c):..\
+Done.\
+(No errors were found.)\
+make multiply\
+cc -g -I/usr/local/sgb/include   -L. -L/usr/local/lib  multiply.c -lgb -lgb -o multiply\
+
+\f5\b multiply.w:200:1: \cf15 warning: \cf2 type specifier missing, defaults to 'int' [-Wimplicit-int]
+\f0\b0 \
+decimal_to_binary(x,s,n)\
+
+\f5\b \cf16 ^
+\f0\b0 \cf2 \
+
+\f5\b multiply.w:222:1: \cf15 warning: \cf2 control reaches end of non-void function [-Wreturn-type]
+\f0\b0 \
+\}\
+
+\f5\b \cf16 ^
+\f0\b0 \cf2 \
+
+\f5\b multiply.w:38:1: \cf15 warning: \cf2 type specifier missing, defaults to 'int' [-Wimplicit-int]
+\f0\b0 \
+main(argc,argv)\
+
+\f5\b \cf16 ^
+\f0\b0 \cf2 \
+
+\f5\b multiply.w:183:69: \cf15 warning: \cf2 format specifies type 'int' but the argument has type 'long'
+\f0\b0 \
+
+\f5\b       [-Wformat]
+\f0\b0 \
+printf("Please try another seed value; %d makes the answer zero!\\n",seed);\
+
+\f5\b \cf16                                        ~~                           ^~~~
+\f0\b0 \cf2 \
+\cf16                                        %ld\cf2 \
+4 warnings generated.\
+make queen.c\
+if test -r queen.ch; then ctangle queen.w queen.ch; else ctangle queen.w; fi\
+This is CTANGLE (Version 3.64)\
+*1*3\
+Writing the output file (queen.c):\
+Done.\
+(No errors were found.)\
+make queen\
+cc -g -I/usr/local/sgb/include   -L. -L/usr/local/lib  queen.c -lgb -lgb -o queen\
+
+\f5\b queen.w:26:1: \cf15 warning: \cf2 type specifier missing, defaults to 'int' [-Wimplicit-int]
+\f0\b0 \
+main()\
+
+\f5\b \cf16 ^
+\f0\b0 \cf2 \
+1 warning generated.\
+make roget_components.c\
+if test -r roget_components.ch; then ctangle roget_components.w roget_components.ch; else ctangle roget_components.w; fi\
+This is CTANGLE (Version 3.64)\
+*1*18\
+Writing the output file (roget_components.c):.\
+Done.\
+(No errors were found.)\
+make roget_components\
+cc -g -I/usr/local/sgb/include   -L. -L/usr/local/lib  roget_components.c -lgb -lgb -o roget_components\
+
+\f5\b roget_components.w:45:1: \cf15 warning: \cf2 type specifier missing, defaults to 'int' [-Wimplicit-int]
+\f0\b0 \
+main(argc,argv)\
+
+\f5\b \cf16 ^
+\f0\b0 \cf2 \
+1 warning generated.\
+make take_risc.c\
+if test -r take_risc.ch; then ctangle take_risc.w take_risc.ch; else ctangle take_risc.w; fi\
+This is CTANGLE (Version 3.64)\
+*1*6*9\
+Writing the output file (take_risc.c):.\
+Done.\
+(No errors were found.)\
+make take_risc\
+cc -g -I/usr/local/sgb/include   -L. -L/usr/local/lib  take_risc.c -lgb -lgb -o take_risc\
+
+\f5\b take_risc.w:35:1: \cf15 warning: \cf2 type specifier missing, defaults to 'int' [-Wimplicit-int]
+\f0\b0 \
+main(argc,argv)\
+
+\f5\b \cf16 ^
+\f0\b0 \cf2 \
+1 warning generated.\
+make word_components.c\
+if test -r word_components.ch; then ctangle word_components.w word_components.ch; else ctangle word_components.w; fi\
+This is CTANGLE (Version 3.64)\
+*1*6\
+Writing the output file (word_components.c):\
+Done.\
+(No errors were found.)\
+make word_components\
+cc -g -I/usr/local/sgb/include   -L. -L/usr/local/lib  word_components.c -lgb -lgb -o word_components\
+
+\f5\b word_components.w:19:1: \cf15 warning: \cf2 type specifier missing, defaults to 'int' [-Wimplicit-int]
+\f0\b0 \
+main()\
+
+\f5\b \cf16 ^
+\f0\b0 \cf2 \
+1 warning generated.\
+mkdir /usr/local/bin\
+mkdir: /usr/local/bin: File exists\
+make: [installdemos] Error 1 (ignored)\
+mv assign_lisa book_components econ_order football girth ladders miles_span multiply queen\
+   roget_components take_risc word_components /usr/local/bin\
+\
+\pard\pardeftab720\partightenfactor0
+================================= End of GraphBase Install Log ==========================\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\fs28 Updated Directories:
+\fs22 \
+\
+My-Mac-Air:Desktop <user-name>$ \cf6 cd /\cf2 \
+My-Mac-Air:/ <user-name>$ \cf6 ls\cf2 \
+\
+Applications			etc\
+Library				home\
+Network				installer.failurerequests\
+System				net\
+Users				private\
+Volumes				sbin\
+bin					tmp\
+cores				\cf4 usr\cf2 \
+dev					var\
+\
+\pard\pardeftab720\partightenfactor0
+==================================================================================================\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\
+My-Mac-Air:usr <user-name>$ \cf6 ls /usr\cf2 \
+\
+bin			lib			\cf4 local\cf2 		share\
+include		libexec		sbin			standalone\
+\
+\pard\pardeftab720\partightenfactor0
+==================================================================================================\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\
+Note: \cf4 sgb\cf2  in blue text indicates this is the GraphBase directory\
+\
+My-Mac-Air:local <user-name>$ \cf6 ls /usr/local\cf2 \
+\
+Caskroom				Homebrew			include		remotedesktop\
+share				Cellar			bin			lib\
+sbin					texlive			Frameworks	etc\
+opt					\cf4 sgb\cf2 				var\
+\
+\pard\pardeftab720\partightenfactor0
+==================================================================================================\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+My-Mac-Air:sgb <user-name>$ \cf6 ls /usr/local/sgb\cf2 \
+\
+data		include\
+\
+\pard\pardeftab720\partightenfactor0
+==================================================================================================\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\
+This directory has the data files for the Stanford GraphBase programs.\
+\
+My-Mac-Air:sgb <user-name>$ \cf6 ls /usr/local/sgb/data\cf2 \
+\
+anna.dat		games.dat	jean.dat		roget.dat\
+david.dat	homer.dat	lisa.dat		words.dat\
+econ.dat		huck.dat		miles.dat\
+\
+\pard\pardeftab720\partightenfactor0
+==================================================================================================\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\
+This directory has the \'93include <filename.h>\'94 files for the Stanford GraphBase programs\
+Which are incorporated into the C program files when they are compiled. \
+\
+My-Mac-Air:sgb <user-name>$ \cf6 ls /usr/local/sgb/include\cf2 \
+\
+Makefile		gb_econ.h	gb_graph.h	gb_plane.h	gb_save.h\
+gb_basic.h	gb_flip.h	gb_io.h		gb_raman.h	gb_sort.h\
+gb_books.h	gb_games.h	gb_lisa.h	gb_rand.h	gb_words.h\
+gb_dijk.h	gb_gates.h	gb_miles.h	gb_roget.h\
+\
+\pard\pardeftab720\partightenfactor0
+==================================================================================================\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\
+My-Mac-Air:local <user-name>$ \cf6 ls /usr/local/bin\cf2 \
+\
+Note: Stanford GraphBase Programs - Are in \cf4 blue\cf2  text, as well as the\
+CWEB binaries \cf4 ctangle\cf2  and \cf4 cweave\cf2 .\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf4 assign_lisa\cf2 			gsdj500			printafm\
+\cf4 book_components\cf2 		gslj				ps2ascii\
+brew					gslp				ps2epsi\
+cordova				gsnd				ps2pdf\
+\cf4 ctangle\cf2 				ios-deploy		ps2pdf12\
+\cf4 cweave\cf2 				\cf4 ladders\cf2 			ps2pdf13\
+dvipdf				lprsetup.sh		ps2pdf14\
+\cf4 econ_order\cf2 			\cf4 miles_span\cf2 		ps2pdfwr\
+eps2eps				\cf4 multiply\cf2 			ps2ps\
+\cf4 football	\cf2 			node				ps2ps2\
+fuzzy_match			npm				\cf4 queen\cf2 \
+\cf4 girth\cf2 				pdf2dsc			\cf4 roget_components\cf2 \
+gs					pdf2ps			sandbox-pod\
+gs-X11				pf2afm			\cf4 take_risc\cf2 \
+gs-noX11				pfbtopfa			unix-lpr.sh\
+gsbj					pod				\cf4 word_components\cf2 \
+gsdj					pphs				xcodeproj\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\fs28 ====================== Stanford GraphBase - Test Results ====================
+\fs22 \
+\
+
+\fs28 Chapter 1.1 WORDS (page 2 of 1994 version)\
+See: 	The Stanford GraphBase - A Platform for Combinatorial Computing\
+		By Donald E. Knuth, Copyright 1994 by the ACM Press\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\fs22 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\fs28 My-Mac-Air:GraphBase <user-name>$ \cf6 ladders
+\fs22 \cf2 \
+\
+Starting word: \cf6 words\cf2 \
+    Goal word: \cf6 graph\cf2 \
+         0 words\
+         1 wolds\
+         2 golds\
+         3 goads\
+         4 grads\
+         5 grade\
+         6 grape\
+         7 graph\
+\
+Starting word: \cf6 order\cf2 \
+    Goal word: \cf6 slobs\cf2 \
+         0 order\
+         1 odder\
+         2 adder\
+         3 aider\
+         4 aides\
+         5 sides\
+         6 sires\
+         7 sores\
+         8 sorts\
+         9 soots\
+        10 slots\
+        11 slobs\
+\
+Starting word: \cf6 chaos\cf2 \
+    Goal word: \cf6 slobs\cf2 \
+         0 chaos\
+         1 choos\
+         2 chows\
+         3 shows\
+         4 slows\
+         5 slobs\
+\
+\pard\pardeftab720\partightenfactor0
+==================================================================================================\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\fs28 Chapter 1.3 BOOKS (page 12 of 1994 version)\
+\
+My-Mac-Air:GraphBase <user-name>$ \cf6 book_components -tanna -n10 -f15 -l20 -V
+\fs22 \cf2 \
+\
+Biconnectivity analysis of book("anna",10,0,15,20,1,1,0)\
+\
+LE=Konstantin Dmitrievitch Levin, proprietor of Pokrovskoe [weight 103]\
+AN=Anna Arkadyevna Karenina, wife of AL [weight 73]\
+VR=Count Alexey Kirillovitch Vronsky, young officer [weight 67]\
+ST=Prince Stepan Arkadyevitch Oblonsky (Stiva), brother of AN [weight 64]\
+KI=Princess Ekaterina Alexandrovna Shtcherbatskaya (Kitty), wife of LE [weight 59]\
+DO=Princess Darya Alexandrovna Oblonskaya (Dolly), wife of ST [weight 46]\
+AL=Alexey Alexandrovitch Karenin, minister of state [weight 39]\
+KO=Sergei Ivanovitch Koznishev, half-brother of LE [weight 38]\
+PS=Princess Shtcherbatskaya, mother of DO and KI [weight 27]\
+PR=Prince Alexander Shtcherbatsky, father of DO and KI [weight 25]\
+\
+Isolated vertex LE\
+Bicomponent PR also includes:\
+ PS (from PR; ..to KI)\
+ and articulation point KI\
+Bicomponent KI also includes:\
+ VR (from ST; ..to AN)\
+ DO (from ST; ..to AN)\
+ ST (from KI; ..to AN)\
+ and AN (this ends a connected component of the graph)\
+Isolated vertex AL\
+Isolated vertex KO\
+\
+\pard\pardeftab720\partightenfactor0
+==================================================================================================\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\fs28 Chapter 1.10 GATES (page 32 of 1994 version)\
+\
+Note: The \'93multiply\'94 command does not accept 100 bit numbers or even 40 bit numbers.\
+\
+My-Mac-Air:Knuth <user-name>$ \cf6 multiply 20 20\cf2 \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\fs22 Here I am, ready to multiply 20-bit numbers by 20-bit numbers.\
+(I'm simulating a logic circuit with 2820 gates, depth 27.)\
+\
+Number, please? <hit \cf6 return\cf2  to exit>\
+ \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\fs28 My-Mac-Air:Knuth <user-name>$ \cf6 multiply 40 40
+\fs22 \cf2 \
+Abort trap: 6\
+\
+
+\fs28 My-Mac-Air:Knuth <user-name>$ \cf6 multiply 30 30
+\fs22 \cf2 \
+Here I am, ready to multiply 30-bit numbers by 30-bit numbers.\
+(I'm simulating a logic circuit with 6177 gates, depth 32.)\
+\
+Number, please? \cf6 123456789\cf2 \
+Another? \cf6 100000001\cf2 \
+123456789x100000001=12345679023456789.\
+\
+\pard\pardeftab720\partightenfactor0
+================================== 
+\fs28 Running Your Own Programs
+\fs22  =====================================\
+\
+\pard\pardeftab720\partightenfactor0
+
+\fs28 Once you have installed the above S/W you can write your own programs to manipulate \
+Graph data structures.  The file \'93\cf13 queen.w\cf2 \'94 is a simple example of how to start doing this.\
+If you enter the terminal command \'93\cf6 make queen\cf2 \'94 it will produce a file \'93\cf4 queen.c\cf2 \'94 and\
+then compile it to the executable file \'93\cf4 queen\cf2 \'94 as shown in the terminal output below.\
+The file queen.ch is a \'93change file\'94 directive used by CWEB to alter queen.w using the\
+CWEB ctangle <file.w> command if is present, otherwise it just outputs a file queen.c,\
+compiles and links it ready for execution.
+\fs22 \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\fs28 My-Mac-Air:tim <user-name>$ \cf6 make queen\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\fs22 \cf2 \
+make queen.c\
+if test -r queen.ch; then ctangle queen.w queen.ch; else ctangle queen.w; fi\
+This is CTANGLE (Version 3.64)\
+*1*3\
+Writing the output file (queen.c):\
+Done.\
+(No errors were found.)\
+make queen\
+cc -g -I/usr/local/sgb/include   -L. -L/usr/local/lib  queen.c -lgb -lgb -o queen\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f5\b queen.w:26:1: \cf15 warning: \cf2 type specifier missing, defaults to 'int' [-Wimplicit-int]
+\f0\b0 \
+main()\
+
+\f5\b \cf16 ^
+\f0\b0 \cf2 \
+1 warning generated.\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\fs28 To run the compiled and linked app (executable) just enter \'93queen\'94 and the following\
+output (a partial listing appears below) will appear following the command.  It will also\
+produce a data file \cf4 queen.gb\cf2  that can be used by subsequent C programs that can process \
+the graph data files and build and alter graph data structures in memory.  For example the\
+main routine has the following:\
+\
+\pard\tx593\pardeftab593\pardirnatural\partightenfactor0
+\cf17 \cb18 \CocoaLigature1 main()
+\f1 \cf0 \
+
+\f0 \cf17 \{\
+  Graph*g,*gg,*ggg;
+\f1 \cf0 \
+
+\f0 \cf17   g= board(\cf19 3\cf17 L,\cf19 4\cf17 L,\cf19 0\cf17 L,\cf19 0\cf17 L,-\cf19 1\cf17 L,\cf19 0\cf17 L,\cf19 0\cf17 L);	/* create a graph G of rook moves on a 3 by 4 chessboard */
+\f1 \cf0 \
+
+\f0 \cf17   gg= board(\cf19 3\cf17 L,\cf19 4\cf17 L,\cf19 0\cf17 L,\cf19 0\cf17 L,-\cf19 2\cf17 L,\cf19 0\cf17 L,\cf19 0\cf17 L);	/* create a graph GG of bishop moves on a 3 by 4 chessboard */
+\f1 \cf0 \
+
+\f0 \cf17   ggg= gunion(g,gg,\cf19 0\cf17 L,\cf19 0\cf17 L);			/* merge the two graphs into a larger graph GGG with gunion call */
+\f1 \cf0 \
+
+\f0 \cf17   save_graph(ggg,\cf20 "queen.gb"\cf17 );		/* save the new graph in a data file - a plain text file */
+\fs24 \
+\}\
+\
+
+\fs28 /* Can also be expressed as follows: */
+\fs24 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\fs28 \cf2 \cb3 \CocoaLigature0 ggg = gunion (board(3,4,0,0,-1,0,0), board(3,4,0,0,-2,0,0),0,0);
+\fs22 \
+\
+
+\fs28 My-Mac-Air:tim <user-name>$ \cf6 queen\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\fs22 \cf2 \
+Queen Moves on a 3x4 Board\
+\
+  The graph whose official name is\
+gunion(board(3,4,0,0,-1,0,0),board(3,4,0,0,-2,0,0),0,0)\
+  has 12 vertices and 92 arcs:\
+\
+0.0\
+  -> 1.1, length 1\
+  -> 2.2, length 2\
+  -> 0.1, length 1\
+  -> 0.2, length 2\
+  -> 0.3, length 3\
+  -> 1.0, length 1\
+  -> 2.0, length 2\
+0.1\
+  -> 1.2, length 1\
+  -> 2.3, length 2\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf6 *** Terminal Output - Removed ***\cf2 \
+\
+2.2\
+  -> 2.3, length 1\
+  -> 2.1, length 1\
+  -> 2.0, length 2\
+  -> 1.3, length 1\
+  -> 1.2, length 1\
+  -> 1.1, length 1\
+  -> 0.2, length 2\
+  -> 0.0, length 2\
+2.3\
+  -> 2.2, length 1\
+  -> 2.1, length 2\
+  -> 2.0, length 3\
+  -> 1.3, length 1\
+  -> 1.2, length 1\
+  -> 0.3, length 2\
+  -> 0.1, length 2\
+\
+\
+\pard\pardeftab720\partightenfactor0
+============================= 
+\fs28 QueenArcs.w - Modified File
+\fs22  =================================\
+\
+\pard\pardeftab720\partightenfactor0
+
+\fs28 This is a modification of the \cf13 queen.w\cf2  file tested above.  It is NOT part of \
+The Stanford GraphBase software and has been modified to illustrate a simple \
+addition to the above program to add backward pointing set of links to each \
+vertex in the graph.  The program name is: \cf13 QueenArcs.w\cf5  - The listing is:
+\fs22 \cf2 \
+\
+
+\fs28 % This file is a part of the Stanford GraphBase (c) Stanford University 1993\
+@i boilerplate.w %<< legal stuff: PLEASE READ IT BEFORE MAKING ANY CHANGES!\
+@i gb_types.w\
+\
+\\def\\title\{QUEEN\}\
+\
+@* Queen moves.\
+This program \\.\{QueenArcs.w\} is a modification of \\.\{Queen.w\} and not part\
+of the Stanford GraphBase files.\
+  \
+This is a short demonstration of how to generate and traverse graphs\
+with the Stanford GraphBase. It creates a graph with 12 vertices,\
+representing the cells of a $3\\times4$ rectangular board; two\
+cells are considered adjacent if you can get from one to another\
+by a queen move. Then it prints a description of the vertices and\
+their neighbors, on the standard output file.  The new filename is:\
+\\.\{QueenArcs.w\} and it writes an ASCII file: \\.\{\cf13 QueenArcs.gb\cf2 \} specified below.\
+\
+The original program \\.\{queen.w\} produced an ASCII file called \\.\{queen.gb\} \
+and can be read by this program by changing the input filename below.\
+\
+Programs can obtain a copy of the queen graph by calling:\
+|restore_graph("queen.gb")|.  You might find it interesting to compare the\
+output of \{\\sc QUEEN\} with the contents of \\.\{queen.gb\}; the former is intended\
+to be readable by human beings, the latter by computers.\
+\
+@p\
+#include "gb_graph.h" /* we use the \{\\sc GB\\_\\,GRAPH\} data structures */\
+#include "gb_basic.h" /* we test the basic graph operations */\
+#include "gb_save.h" /* and we save our results in ASCII format */\
+@#\
+\
+/* Macro definitions for GraphBase Extensions - See Section:\
+   2.1 Representation of Graphs - Page 39 in The Stanford GraphBase - \
+   Copyright 1993 by Stanford University */\
+#define source     a.V\
+#define back_arcs  z.A\
+#define back_next  b.A\
+\
+/* This is a modified version of the Queen program in the GraphBase.  It alters\
+   the graph after writing it to the data file by adding a set of back pointing \
+   arcs to each vertex in the graph. */\
+\
+int main()\
+\{@+Graph *g, *gg, *ggg;\
+\
+  register Vertex *v; /* current vertex being visited */\
+  register Vertex *u; /* utility vertex */\
+  int i; /* Index into array of vertices */\
+  int n_back_arcs=0;   /* number of back arcs added to graph */\
+  register Arc *a; /* current arc from |v| */\
+\
+  g=board(3L,4L,0L,0L,-1L,0L,0L); /* a graph with rook moves */\
+  gg=board(3L,4L,0L,0L,-2L,0L,0L); /* a graph with bishop moves */\
+  ggg=gunion(g,gg,0L,0L); /* a graph with queen moves */\
+\
+  save_graph(ggg,"\cf13 QueenArcs.gb\cf2 "); /* generate an ASCII file for |ggg| */\
+\
+  @<Print Vertices and Edges of |ggg|@>;\
+\
+  /* Recycle the Graph ggg and restore it from GB data file */\
+  /* Deallocate storage for Graph ggg - NOTE pointer is not set to NULL */\
+  gb_recycle (ggg); \
+  if (ggg != NULL) \{\
+    printf ("Graph ggg recycled.\\n");\
+    ggg = restore_graph ("\cf13 QueenArcs.gb\cf2 ");\
+    if (ggg == NULL) \{\
+      printf ("Panic - File 'QueenArcs.gb' missing or corrupted: (panic %ld)!\\n",panic_code);\
+      return 1;\
+    \}\
+    /* Modify Graph ggg to add list of back Arcs that point to each Vertex u */\
+    for (i=0; i < ggg->n; i++) \{ v = &ggg->vertices[i]; v->back_arcs = NULL; \}\
+    n_back_arcs = 0;\
+    for (i=0; i < ggg->n; i++) \{\
+      v = &ggg->vertices[i];\
+      for (a = v->arcs; a!=NULL; a=a->next) \{\
+        a->source = v;\
+        u = a->tip;\
+        a->back_next = u->back_arcs;\
+        u->back_arcs = a;\
+        n_back_arcs++;\
+      \}\
+    \}\
+    printf("QueenArcs has %ld vertices and %ld arcs:\\n", ggg->n, ggg->m);\
+    printf("Back Arcs added %d\\n\\n", n_back_arcs);\
+  \}\
+  else \{\
+    printf ("Panic - Graph ggg not deallocated (panic code %ld)!\\n",panic_code);\
+    return 1;\
+  \}\
+  return 0; /* normal exit */\
+\}\
+\
+@ @<Print Vertices and Edges of |ggg|@>=\
+if (ggg==NULL)\
+    printf("Something went wrong (panic code %ld)!\\n",panic_code);\
+else \{\
+  printf("QueenArcs - Modified Program: Queen Moves on a 3x4 Board\\n\\n");\
+  printf("  The graph whose official name is\\n%s\\n", ggg->id);\
+  printf("  has %ld vertices and %ld arcs:\\n\\n", ggg->n, ggg->m);\
+\
+  for (i=0; i < ggg->n; i++) \{\
+    v = &ggg->vertices[i];\
+    printf("%s\\n", v->name);\
+    for (a=v->arcs; a; a=a->next)\
+      printf("  -> %s, length %ld\\n", a->tip->name, a->len);\
+  \}\
+\}\
+\
+@* Index.
+\fs22 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 ================================== 
+\fs28 Running QueenArcs.w
+\fs22  ==============================\
+\
+
+\fs28 Note: The Makefile for building this program was modified to set $(SGBDIR)\
+\
+(from)\
+SGBDIR = /usr/local/sgb\
+(to)
+\fs22 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\fs28 \cf2 \cb3 SGBDIR = /Users/\cf13 <user-name>\cf2 /Desktop/Knuth/SGB/LIB_DIR\
+\
+(from)\
+LIBDIR = /usr/local/lib\
+(to)\
+LIBDIR = $(SGBDIR)/lib\
+\
+(from)\
+BINDIR = /usr/local/bin\
+(to)\
+BINDIR = $(SGBDIR)/bin\
+\
+(unchanged)\
+CWEBINPUTS = /usr/local/lib/cweb\
+\
+where \cf13 <user-name>\cf2  is the directory that holds the \'93Desktop\'94 directory.\
+The sub directory . . . /Knuth/SGB is where the modified \cf4 source.w\cf2  files\
+reside and where the \cf4 source.c\cf2 , \cf4 executable\cf2 , \cf4 source.tex\cf2 , \cf4 source.dvi\cf2 , etc.\
+will be created.\
+\
+My\'97Mac-Air:SGB <user-name>$ \cf14 pwd\cf2 \
+/Users/<user-name>/Desktop/Knuth/SGB\
+\
+My\'97Mac-Air:SGB <user-name>$ \cf14 ls\cf2 \
+QueenArcs			QueenArcs.w		cwebmac.tex\
+\cf13 LIB_DIR\cf2 			QueenArcs.pdf		Queen_Dir\
+Makefile			QueenArcs.tex		README-SGB\
+\
+Note: \cf13 LIB_DIR\cf2  contains the following directories:\
+\
+My-Mac-Air:SGB <user-name>$ \cf6 ls -l LIB_DIR
+\fs34 \cf2 \cb3 \
+
+\fs28 \cf2 \cb3 drwxr-xr-x   2 <user-name>  staff   64 Sep  9 19:12 bin\
+lrwxr-xr-x   1 <user-name>  admin   29 Aug 28 13:54 cweb -> ../Cellar/cweb/3.64b/lib/cweb\
+drwxr-xr-x  13 <user-name>  staff  416 Aug 29 16:31 data\
+drwxr-xr-x  21 <user-name>  staff  672 Sep  9 18:55 include\
+drwxr-xr-x   3 <user-name>  staff   96 Sep  9 19:48 lib\
+\
+. . ./cweb      holds symbolic link to installed CWEB directory\
+. . ./data      holds SGB file.gb data files\
+. . ./include   holds #include \'93\cf13 gb_header.h\cf2 \'94 header files\
+. . ./lib       holds \cf13 libgb.a\cf2  Stanford GraphBase library routines 
+\fs34 \cf2 \cb3 \
+
+\fs28 \cf2 \cb3 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+My-Mac-Air:SGB <user-name>$ \cf14 make QueenArcs\cf2 \
+make QueenArcs.c\
+if test -r QueenArcs.ch; then ctangle QueenArcs.w QueenArcs.ch; else ctangle QueenArcs.w; fi\
+This is CTANGLE (Version 3.64)\
+*1*3\
+Writing the output file (QueenArcs.c):\
+Done.\
+(No errors were found.)\
+make QueenArcs\
+cc -g -I/Users/<user-name>/Desktop/Knuth/SGB/LIB_DIR/include \cf14 (command wraps to next line)\cf2   \
+      -L. -L/Users/<user-name>/Desktop/Knuth/SGB/LIB_DIR/lib  QueenArcs.c -lgb -lgb -o QueenArcs\
+\
+My-Mac-Air:SGB <user-name>$ \cf14 ./QueenArcs\cf2 \
+QueenArcs - Modified Program: Queen Moves on a 3x4 Board\
+\
+  The graph whose official name is\
+gunion(board(3,4,0,0,-1,0,0),board(3,4,0,0,-2,0,0),0,0)\
+  has 12 vertices and 92 arcs:\
+\
+0.0\
+  -> 1.1, length 1\
+  -> 2.2, length 2\
+  -> 0.1, length 1\
+  -> 0.2, length 2\
+  -> 0.3, length 3\
+  -> 1.0, length 1\
+  -> 2.0, length 2\
+0.1\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\fs22 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\fs28 \cf6 *** Terminal Output - Removed ***
+\fs22 \cf2 \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\fs28 2.2\
+  -> 2.3, length 1\
+  -> 2.1, length 1\
+  -> 2.0, length 2\
+  -> 1.3, length 1\
+  -> 1.2, length 1\
+  -> 1.1, length 1\
+  -> 0.2, length 2\
+  -> 0.0, length 2\
+2.3\
+  -> 2.2, length 1\
+  -> 2.1, length 2\
+  -> 2.0, length 3\
+  -> 1.3, length 1\
+  -> 1.2, length 1\
+  -> 0.3, length 2\
+  -> 0.1, length 2\
+Graph ggg recycled.\
+QueenArcs has 12 vertices and 92 arcs:\
+Back Arcs added 92  \cf14 <- - - program modified to show added Arc records.\cf2 \
+\
+My-Mac-Air:SGB <user-name>$ \cf14 cweave QueenArcs\cf2 \
+This is CWEAVE (Version 3.64)\
+*1*3\
+Writing the output file...*1*3\
+Writing the index...\
+Done.\
+(No errors were found.)\
+\
+My-Mac-Air:SGB <user-name>$ \cf14 tex QueenArcs.tex\cf2 \
+This is TeX, Version 3.14159265 (TeX Live 2020) (preloaded format=tex)\
+(./QueenArcs.tex (./cwebmac.tex) *1 [1] [2] *3 Index: (./QueenArcs.idx)\
+[3] Section names: (./QueenArcs.scn) [4] Table of contents: (./QueenArcs.toc)\
+[0] )\
+Output written on QueenArcs.dvi (5 pages, 11928 bytes).\
+Transcript written on QueenArcs.log.\
+My-Mac-Air:SGB <user-name>$}
